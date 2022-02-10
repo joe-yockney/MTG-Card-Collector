@@ -11,37 +11,45 @@ build_property.EnableTrimAnalyzer = true
 build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = MTGCardCollector
 build_property.RootNamespace = MTGCardCollector
-build_property.ProjectDir = C:\Users\joewi\source\repos\MTGCardCollector\MTGCardCollector\
+build_property.ProjectDir = C:\Users\joewi\Documents\GitHub\MTG-Card-Collector\MTGCardCollector\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\joewi\source\repos\MTGCardCollector\MTGCardCollector
+build_property.MSBuildProjectDirectory = C:\Users\joewi\Documents\GitHub\MTG-Card-Collector\MTGCardCollector
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/joewi/source/repos/MTGCardCollector/MTGCardCollector/App.razor]
+[C:/Users/joewi/Documents/GitHub/MTG-Card-Collector/MTGCardCollector/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/joewi/source/repos/MTGCardCollector/MTGCardCollector/Pages/Index.razor]
+[C:/Users/joewi/Documents/GitHub/MTG-Card-Collector/MTGCardCollector/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/joewi/source/repos/MTGCardCollector/MTGCardCollector/Pages/Random.razor]
+[C:/Users/joewi/Documents/GitHub/MTG-Card-Collector/MTGCardCollector/Pages/Random.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmFuZG9tLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/joewi/source/repos/MTGCardCollector/MTGCardCollector/Pages/ViewCard.razor]
+[C:/Users/joewi/Documents/GitHub/MTG-Card-Collector/MTGCardCollector/Pages/SetCollection.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2V0Q29sbGVjdGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joewi/Documents/GitHub/MTG-Card-Collector/MTGCardCollector/Pages/ViewCard.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld0NhcmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/joewi/source/repos/MTGCardCollector/MTGCardCollector/_Imports.razor]
+[C:/Users/joewi/Documents/GitHub/MTG-Card-Collector/MTGCardCollector/Pages/ViewSet.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld1NldC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joewi/Documents/GitHub/MTG-Card-Collector/MTGCardCollector/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/joewi/source/repos/MTGCardCollector/MTGCardCollector/Shared/MainLayout.razor]
+[C:/Users/joewi/Documents/GitHub/MTG-Card-Collector/MTGCardCollector/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-tyeq2oke9g
 
-[C:/Users/joewi/source/repos/MTGCardCollector/MTGCardCollector/Shared/NavMenu.razor]
+[C:/Users/joewi/Documents/GitHub/MTG-Card-Collector/MTGCardCollector/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-l65l0jwfkf

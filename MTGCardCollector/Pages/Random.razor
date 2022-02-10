@@ -24,9 +24,17 @@ else
            <div class="row">
                 @foreach (var item in RandomCard.Cards)
                 {
-                   <div class="col-sm-2">
-                       <img @onclick="() => NavigateToCard(item.id)" src="@item.imageUrl" height="290" width="220">
-                       <p>@item.id</p>
+                   <div class="col-sm-2" style="text-align:center">
+                       @if(item.imageUrl == null)
+                        {
+                            <img @onclick="() => NavigateToCard(item.multiverseid)" src="/img/olwr8sjm.bmp" height="290" width="220">
+                        }
+                        else
+                        {
+                            <img @onclick="() => NavigateToCard(item.multiverseid)" src="@item.imageUrl" height="290" width="220">
+                        }
+                        <h4>@item.name</h4>
+                        
                    </div>
                 }
             </div>
@@ -59,10 +67,20 @@ else
         System.Random random = new System.Random();
 
         int PageNumber = random.Next(1, 10000);
+        string response = await client.GetStringAsync($"cards?random&page={PageNumber}&pageSize=5");
 
         RandomCard = await client.GetFromJsonAsync<Root>($"cards?random&page={PageNumber}&pageSize=5");
 
-        string response = await client.GetStringAsync($"cards?random&page={PageNumber}&pageSize=5");
+        
+
+        bool check = RandomCard.Cards.Any(c => c.multiverseid == null);
+
+        if (check == true)
+        {
+            Console.WriteLine("Nully boy");
+            await GetRandomCard();
+        }
+
 
         if (RandomCard == null)
         {
@@ -75,9 +93,14 @@ else
         }
 
     }
-    private void NavigateToCard(string id)
+    private void NavigateToCard(string multiverseid)
     {
-        NavigationManager.NavigateTo($"ViewCard/{id}");
+        if (string.IsNullOrEmpty(multiverseid))
+        {
+            throw new ArgumentException($"'{nameof(multiverseid)}' cannot be null or empty.", nameof(multiverseid));
+        }
+
+        NavigationManager.NavigateTo($"ViewCard/{multiverseid}");
     }
 }
 

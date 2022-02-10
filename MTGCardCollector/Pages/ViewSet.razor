@@ -1,0 +1,44 @@
+﻿@page "/ViewSets"
+@using System.Net.Http
+@using System.Net.Http.Json
+@using System.Threading.Tasks
+@using Newtonsoft.Json
+@using System.Runtime.Serialization.Json
+@using System.Text.Json.Serialization
+@using Models;
+@inject NavigationManager NavigationManager
+@inject HttpClient client
+
+@foreach (var item in set.Sets.OrderBy(c => c.name))
+{
+    <p style="cursor:pointer" @onclick="() => NavigateToSet(item.name)">@item.name</p>
+}
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await GetSetList();
+
+    }
+
+    private Root set;
+
+    private async Task<Root> GetSetList()
+    {
+        using HttpClient client = new()
+        {
+            BaseAddress = new Uri("https://api.magicthegathering.io/v1/")
+        };
+
+        set = await client.GetFromJsonAsync<Root>("sets");
+
+
+        return set;
+    }
+
+    private void NavigateToSet(string name)
+    {
+        NavigationManager.NavigateTo($"ViewSets/SetCollection/{name}");
+    }
+
+}

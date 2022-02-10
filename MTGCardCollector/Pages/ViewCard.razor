@@ -1,4 +1,4 @@
-﻿@page "/ViewCard/{id}"
+﻿@page "/ViewCard/{multiverseid}"
 @using System.Net.Http
 @using System.Net.Http.Json
 @using System.Threading.Tasks
@@ -8,51 +8,75 @@
 @using Models;
 @inject HttpClient client
 
-<h3>ViewCard</h3>
-@if (card == null)
-{
-    <p>loading..</p>
-}
-else
-{
-    <p>@card.name</p>
-}
+<div class="container">
+    <div class="row">
+        <div class="offset-4 col-md-4" style="text-align:center">
+        @if(card == null)
+        {
+            <p>Loading..</p>
+        }
+        else
+        {
+            
+                <h3>@card.Card.name</h3>
+                @if (card.Card.imageUrl == null)
+               {
+                   <img src="/img/olwr8sjm.bmp" height="500" width="350">
+               }
+                <img src="@card.Card.imageUrl" height="500" width="350"/>
+                <h5>@card.Card.text</h5>
+            
+        }
+        </div>
+    </div>
+</div>
+
+
 
 
 
 @code {
 
     [Parameter]
-    public string? id { get; set; }
+    public string? multiverseid { get; set; }
 
-    private Card? card;
+    private Root? card;
 
     protected override async Task OnInitializedAsync()
     {
-        await GetCard(@id);
+        await GetCard(@multiverseid);
     }
 
-    private async Task<Card> GetCard(string getid)
+    private async Task<Root> GetCard(string multiverseid)
     {
         using HttpClient client = new()
         {
           BaseAddress = new Uri("https://api.magicthegathering.io/v1/")
 
         };
-        string response = await client.GetStringAsync($"/cards/{id}");
-        Console.WriteLine(id);
-        Console.WriteLine(response);
-        card = await client.GetFromJsonAsync<Card>($"/cards/{id}");
+
+        var level = await client.GetAsync($"https://api.magicthegathering.io/v1/cards/{multiverseid}");
+        var json = await level.Content.ReadAsStringAsync();
+
+
+        Console.WriteLine(multiverseid);
+
+        //string response = await client.GetStringAsync($"cards/{multiverseid}");
+
+        //card = await client.GetFromJsonAsync<Card>($"cards/{multiverseid}");
+        card = JsonConvert.DeserializeObject<Root>(json);
+
+        Console.WriteLine(card.Card.name);
 
         if (card == null)
         {
-            Card end = new Card();
-            return end;
+            return card = new Root();
         }
         else
         {
-            return card;
+           return card; 
         }
+        
     }
 
 

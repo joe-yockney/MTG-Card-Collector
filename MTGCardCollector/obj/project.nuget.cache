@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fypTvULLlFWchEM8qd+iW7M8lUz1JIUhKzTPyDsvIIYTH5aaHSpt82Jaq06iDDVzU8G1yk8k8/mPH3WwA1BQ2A==",
+  "dgSpecHash": "REPvErNAauMyr5CRyEzTiSKusEyWPR5dNUM446t1bKGAlQ76fQVPfm9+CYuLBauQBq/wLd3CZ+JhQHH56YvmVA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\joewi\\source\\repos\\MTGCardCollector\\MTGCardCollector\\MTGCardCollector.csproj",
+  "projectFilePath": "C:\\Users\\joewi\\Documents\\GitHub\\MTG-Card-Collector\\MTGCardCollector\\MTGCardCollector.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joewi\\.nuget\\packages\\flurl\\3.0.1\\flurl.3.0.1.nupkg.sha512",
     "C:\\Users\\joewi\\.nuget\\packages\\flurl.http\\3.0.1\\flurl.http.3.0.1.nupkg.sha512",

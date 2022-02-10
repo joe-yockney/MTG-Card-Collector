@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joewi\\source\\repos\\MTGCardCollector\\MTGCardCollector\\MTGCardCollector.csproj": {}
+    "C:\\Users\\joewi\\Documents\\GitHub\\MTG-Card-Collector\\MTGCardCollector\\MTGCardCollector.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joewi\\source\\repos\\MTGCardCollector\\MTGCardCollector\\MTGCardCollector.csproj": {
+    "C:\\Users\\joewi\\Documents\\GitHub\\MTG-Card-Collector\\MTGCardCollector\\MTGCardCollector.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joewi\\source\\repos\\MTGCardCollector\\MTGCardCollector\\MTGCardCollector.csproj",
+        "projectUniqueName": "C:\\Users\\joewi\\Documents\\GitHub\\MTG-Card-Collector\\MTGCardCollector\\MTGCardCollector.csproj",
         "projectName": "MTGCardCollector",
-        "projectPath": "C:\\Users\\joewi\\source\\repos\\MTGCardCollector\\MTGCardCollector\\MTGCardCollector.csproj",
+        "projectPath": "C:\\Users\\joewi\\Documents\\GitHub\\MTG-Card-Collector\\MTGCardCollector\\MTGCardCollector.csproj",
         "packagesPath": "C:\\Users\\joewi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joewi\\source\\repos\\MTGCardCollector\\MTGCardCollector\\obj\\",
+        "outputPath": "C:\\Users\\joewi\\Documents\\GitHub\\MTG-Card-Collector\\MTGCardCollector\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

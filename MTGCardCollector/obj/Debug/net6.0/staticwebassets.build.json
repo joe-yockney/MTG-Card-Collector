@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pOu2/W48IPFB4CDWLbDsOtO4+1FT1Nf9Jro4pKXa4kM=",
+  "Hash": "OF4dJL5utx3rCaa2FOPwT5q6oCJ4diQFYfJ6qatGp7k=",
   "Source": "MTGCardCollector",
   "BasePath": "/",
   "Mode": "Root",
@@ -7274,6 +7274,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\icon-192.png"
+    },
+    {
+      "Identity": "C:\\Users\\joewi\\source\\repos\\MTGCardCollector\\MTGCardCollector\\wwwroot\\img\\olwr8sjm.bmp",
+      "SourceId": "MTGCardCollector",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\joewi\\source\\repos\\MTGCardCollector\\MTGCardCollector\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "img/olwr8sjm.bmp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\olwr8sjm.bmp"
     },
     {
       "Identity": "C:\\Users\\joewi\\source\\repos\\MTGCardCollector\\MTGCardCollector\\wwwroot\\index.html",
