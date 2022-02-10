@@ -1,0 +1,83 @@
+﻿@using System.Net.Http
+@using System.Net.Http.Json
+@using System.Threading.Tasks
+@using Newtonsoft.Json
+@using System.Runtime.Serialization.Json
+@using System.Text.Json.Serialization
+@using Models;
+@inject NavigationManager NavigationManager
+@inject HttpClient client
+
+<div class="container" style="margin:auto">
+@if(RandomCard == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    @if(RandomCard.Cards == null)
+    {
+        <p>Loading...</p>
+    }
+    else
+    {
+           <div class="row">
+                @foreach (var item in RandomCard.Cards)
+                {
+                   <div class="col-sm-2">
+                       <img @onclick="() => NavigateToCard(item.id)" src="@item.imageUrl" height="290" width="220">
+                       <p>@item.id</p>
+                   </div>
+                }
+            </div>
+    }
+}
+</div>
+
+@code {
+
+
+    private Set? set;
+    private Root? SetCards;
+    private Root? RandomCard;
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetRandomCard();
+
+
+    }
+
+    private async Task<Root> GetRandomCard()
+    {
+        using HttpClient client = new()
+        {
+            BaseAddress = new Uri("https://api.magicthegathering.io/v1/")
+        };
+        System.Random random = new System.Random();
+
+        int PageNumber = random.Next(1, 10000);
+
+        RandomCard = await client.GetFromJsonAsync<Root>($"cards?random&page={PageNumber}&pageSize=5");
+
+        string response = await client.GetStringAsync($"cards?random&page={PageNumber}&pageSize=5");
+
+        if (RandomCard == null)
+        {
+            Root end = new Root();
+            return end;
+        }
+        else
+        {
+            return RandomCard;
+        }
+
+    }
+    private void NavigateToCard(string id)
+    {
+        NavigationManager.NavigateTo($"ViewCard/{id}");
+    }
+}
+
